@@ -1,0 +1,8 @@
+{
+  "name": "Remix: EngLearn Pro",
+  "description": "Nền tảng học tiếng Anh tương tác, tự động tạo bài giảng và bài tập từ file PDF sách giáo khoa.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

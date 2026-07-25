@@ -1,0 +1,417 @@
+{
+  "lessons": [
+    {
+      "title": "UNIT 1: MY NEW SCHOL",
+      "partI": {
+        "vocabulary": [
+          {
+            "word": "school bag",
+            "phonetic": "/'sku:l bæg/",
+            "meaning": "cặp sách"
+          },
+          {
+            "word": "compass",
+            "phonetic": "/'kʌmpəs/",
+            "meaning": "compa"
+          },
+          {
+            "word": "calculator",
+            "phonetic": "/'kælkjuleɪtə(r)/",
+            "meaning": "máy tính cầm tay"
+          },
+          {
+            "word": "rubber",
+            "phonetic": "/'rʌbə(r)/",
+            "meaning": "cục tẩy"
+          },
+          {
+            "word": "pencil case",
+            "phonetic": "/'pensl keɪs/",
+            "meaning": "hộp bút"
+          },
+          {
+            "word": "pencil sharpener",
+            "phonetic": "/'pensl ʃɑ:pnə(r)/",
+            "meaning": "gọt bút chì"
+          },
+          {
+            "word": "uniform",
+            "phonetic": "/'ju:nɪfɔ:m/",
+            "meaning": "đồng phục"
+          },
+          {
+            "word": "bicycle",
+            "phonetic": "/'baɪsɪkl/",
+            "meaning": "xe đạp"
+          },
+          {
+            "word": "subject",
+            "phonetic": "/'sʌbdʒɪkt/",
+            "meaning": "môn học"
+          },
+          {
+            "word": "English",
+            "phonetic": "/'ɪŋglɪʃ/",
+            "meaning": "tiếng Anh"
+          },
+          {
+            "word": "history",
+            "phonetic": "/'hɪstri/",
+            "meaning": "lịch sử"
+          },
+          {
+            "word": "science",
+            "phonetic": "/'saɪəns/",
+            "meaning": "khoa học"
+          },
+          {
+            "word": "maths",
+            "phonetic": "/mæθs/",
+            "meaning": "môn toán"
+          },
+          {
+            "word": "art",
+            "phonetic": "/ɑ:t/",
+            "meaning": "mỹ thuật"
+          },
+          {
+            "word": "music",
+            "phonetic": "/'mju:zɪk/",
+            "meaning": "âm nhạc"
+          },
+          {
+            "word": "boarding school",
+            "phonetic": "/'bɔ:dɪŋ sku:l/",
+            "meaning": "trường nội trú"
+          },
+          {
+            "word": "international school",
+            "phonetic": "/ˌɪntə'næʃnəl sku:l/",
+            "meaning": "trường quốc tế"
+          },
+          {
+            "word": "classmate",
+            "phonetic": "/'klɑ:smeɪt/",
+            "meaning": "bạn cùng lớp"
+          },
+          {
+            "word": "homework",
+            "phonetic": "/'həʊmwɜ:k/",
+            "meaning": "bài tập về nhà"
+          },
+          {
+            "word": "exercise",
+            "phonetic": "/'eksəsaɪz/",
+            "meaning": "bài tập/thể dục"
+          },
+          {
+            "word": "school lunch",
+            "phonetic": "/sku:l lʌntʃ/",
+            "meaning": "bữa trưa ở trường"
+          },
+          {
+            "word": "break time",
+            "phonetic": "/breɪk taɪm/",
+            "meaning": "giờ ra chơi/giờ giải lao"
+          }
+        ],
+        "grammar": [
+          {
+            "structure": "The present simple (Thì hiện tại đơn)",
+            "explanation": "Chúng ta sử dụng thì hiện tại đơn để nói về các hành động hoặc sự việc thường xuyên xảy ra, hoặc mang tính cố định. Lưu ý: Động từ ở thì hiện tại đơn đi với các chủ ngữ he / she / it cần thêm 's' hoặc 'es'.",
+            "examples": [
+              {
+                "en": "We usually go to school by bus.",
+                "vn": "Chúng tôi thường đến trường bằng xe buýt."
+              },
+              {
+                "en": "I don't like school lunch very much.",
+                "vn": "Tôi không thích bữa trưa ở trường cho lắm."
+              },
+              {
+                "en": "My school has a large playground.",
+                "vn": "Trường của tôi có một sân chơi rộng."
+              }
+            ]
+          },
+          {
+            "structure": "Adverbs of frequency (Trạng từ chỉ tần suất)",
+            "explanation": "Chúng ta sử dụng trạng từ chỉ tần suất để chỉ mức độ thường xuyên xảy ra của một việc gì đó. Chúng ta thường dùng chúng với thì hiện tại đơn. Vị trí: Chúng ta thường đặt trạng từ chỉ tần suất trước động từ chính. Các trạng từ thường gặp: always, usually, often, sometimes, rarely, never.",
+            "examples": [
+              {
+                "en": "Tom usually takes the bus to school.",
+                "vn": "Tom thường xuyên đi xe buýt đến trường."
+              },
+              {
+                "en": "They don't often go to the cinema.",
+                "vn": "Họ không thường xuyên đi xem phim."
+              },
+              {
+                "en": "We always look smart in our uniforms.",
+                "vn": "Chúng tôi luôn trông thật gọn gàng trong bộ đồng phục."
+              }
+            ]
+          },
+          {
+            "structure": "Verb + Noun collocations (Sự kết hợp từ: Động từ + Danh từ)",
+            "explanation": "Dùng các động từ play, do, have, study kết hợp với các danh từ phù hợp để chỉ các hoạt động học tập và ngoại khóa. Công thức & Ví dụ:\n- play + (môn thể thao/trò chơi): play football (chơi bóng đá).\n- do + (hoạt động thể chất/bài tập): do homework (làm bài tập về nhà), do exercise (tập thể dục).\n- have + (bữa ăn/tiết học): have school lunch (ăn bữa trưa ở trường), have lessons (có tiết học).\n- study + (môn học): study science (học khoa học), study English (học tiếng Anh).",
+            "examples": [
+              {
+                "en": "I play football on weekends.",
+                "vn": "Tôi chơi bóng đá vào cuối tuần."
+              },
+              {
+                "en": "We do our homework every evening.",
+                "vn": "Chúng tôi làm bài tập về nhà mỗi tối."
+              },
+              {
+                "en": "Students have school lunch at noon.",
+                "vn": "Học sinh ăn bữa trưa ở trường vào buổi trưa."
+              },
+              {
+                "en": "She studies English at an international school.",
+                "vn": "Cô ấy học tiếng Anh tại một trường quốc tế."
+              }
+            ]
+          }
+        ]
+      },
+      "partII": {
+        "type1": [
+          {
+            "vn": "cặp sách",
+            "en": "school bag"
+          },
+          {
+            "vn": "máy tính cầm tay",
+            "en": "calculator"
+          },
+          {
+            "vn": "đồng phục",
+            "en": "uniform"
+          },
+          {
+            "vn": "môn học",
+            "en": "subject"
+          },
+          {
+            "vn": "bài tập về nhà",
+            "en": "homework"
+          },
+          {
+            "vn": "compa",
+            "en": "compass"
+          }
+        ],
+        "type2": [
+          {
+            "word": "compass"
+          },
+          {
+            "word": "bicycle"
+          },
+          {
+            "word": "history"
+          },
+          {
+            "word": "classmate"
+          },
+          {
+            "word": "break time"
+          },
+          {
+            "word": "school bag"
+          }
+        ],
+        "type3": [
+          {
+            "jumbled": [
+              "always",
+              "We",
+              "uniforms",
+              "smart",
+              "in",
+              "look",
+              "our",
+              "."
+            ],
+            "correct": "We always look smart in our uniforms."
+          },
+          {
+            "jumbled": [
+              "English",
+              "does",
+              "She",
+              "study",
+              "not",
+              "."
+            ],
+            "correct": "She does not study English."
+          },
+          {
+            "jumbled": [
+              "have",
+              "school",
+              "lunch",
+              "Do",
+              "you",
+              "at",
+              "school",
+              "?"
+            ],
+            "correct": "Do you have school lunch at school?"
+          },
+          {
+            "jumbled": [
+              "often",
+              "go",
+              "They",
+              "to",
+              "cinema",
+              "the",
+              "don't",
+              "."
+            ],
+            "correct": "They don't often go to the cinema."
+          },
+          {
+            "jumbled": [
+              "pencil",
+              "My",
+              "a",
+              "sharpener",
+              "has",
+              "new",
+              "case",
+              "."
+            ],
+            "correct": "My pencil case has a new pencil sharpener."
+          }
+        ],
+        "type4": {
+          "paragraph": "My friend, Anna, goes to an international school. She usually takes the bicycle to school. Her school starts at 8 AM. Anna studies many subjects like English, Maths, Science, and Art. She always does her homework after school. During break time, she sometimes plays with her classmates in the playground. At noon, she has school lunch with her friends. Anna loves her school very much.",
+          "questions": [
+            {
+              "question": "What kind of school does Anna go to?",
+              "options": [
+                "A. A boarding school",
+                "B. A public school",
+                "C. An international school",
+                "D. A primary school"
+              ],
+              "answer": "C"
+            },
+            {
+              "question": "How does Anna usually go to school?",
+              "options": [
+                "A. By bus",
+                "B. By bicycle",
+                "C. By car",
+                "D. On foot"
+              ],
+              "answer": "B"
+            },
+            {
+              "question": "What does Anna do during break time?",
+              "options": [
+                "A. She studies English",
+                "B. She has school lunch",
+                "C. She does homework",
+                "D. She sometimes plays with her classmates"
+              ],
+              "answer": "D"
+            }
+          ]
+        },
+        "type5": [
+          {
+            "conversation": "A: Do you like your new school?\nB: Yes, I do! It's an international school.\nA: What subjects do you study?\nB: I study English, Science, and History. I also have Art lessons.",
+            "translation": "A: Bạn có thích trường mới của mình không?\nB: Có, tôi có! Đó là một trường quốc tế.\nA: Bạn học những môn gì?\nB: Tôi học tiếng Anh, Khoa học và Lịch sử. Tôi cũng có các tiết học Mỹ thuật."
+          },
+          {
+            "conversation": "A: Do you do your homework every day?\nB: Yes, I always do my homework. It's important.\nA: What about exercise?\nB: I often do exercise after school with my brother.",
+            "translation": "A: Bạn có làm bài tập về nhà mỗi ngày không?\nB: Có, tôi luôn làm bài tập về nhà. Nó rất quan trọng.\nA: Còn tập thể dục thì sao?\nB: Tôi thường tập thể dục sau giờ học với anh trai tôi."
+          },
+          {
+            "conversation": "A: What do you usually do during break time?\nB: I usually talk with my classmates or read a book.\nA: Do you have school lunch?\nB: No, I usually bring my own lunch from home.",
+            "translation": "A: Bạn thường làm gì trong giờ giải lao?\nB: Tôi thường nói chuyện với bạn cùng lớp hoặc đọc sách.\nA: Bạn có ăn bữa trưa ở trường không?\nB: Không, tôi thường mang bữa trưa của riêng mình từ nhà đi."
+          }
+        ],
+        "type6": [
+          {
+            "sentence": "My school has a large playground where we play."
+          },
+          {
+            "sentence": "She often uses a calculator for her Maths lessons."
+          },
+          {
+            "sentence": "We always wear our clean uniform to school."
+          },
+          {
+            "sentence": "I usually ride my bicycle to school in the morning."
+          },
+          {
+            "sentence": "Students do a lot of exercise during break time."
+          }
+        ],
+        "type7": {
+          "topic": "Write a short paragraph about your favorite subject at school. What do you study, and why do you like it?"
+        },
+        "type8": [
+          {
+            "question": "Which word means 'a tool for drawing circles'?",
+            "options": [
+              "A. calculator",
+              "B. compass",
+              "C. rubber",
+              "D. pencil case"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "My brother _____ (study) Science at a boarding school.",
+            "options": [
+              "A. study",
+              "B. studies",
+              "C. studying",
+              "D. studied"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "They _____ (not, often, go) to the cinema.",
+            "options": [
+              "A. don't often go",
+              "B. often don't go",
+              "C. doesn't often go",
+              "D. aren't often go"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What is the English word for 'bữa trưa ở trường'?",
+            "options": [
+              "A. school bag",
+              "B. break time",
+              "C. school lunch",
+              "D. homework"
+            ],
+            "answer": "C"
+          },
+          {
+            "question": "Which of these activities uses the verb 'do'?",
+            "options": [
+              "A. play football",
+              "B. have lessons",
+              "C. do homework",
+              "D. study English"
+            ],
+            "answer": "C"
+          }
+        ]
+      },
+      "id": "1784989790508",
+      "grade": "6"
+    }
+  ]
+}
