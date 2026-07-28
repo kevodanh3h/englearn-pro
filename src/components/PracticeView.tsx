@@ -38,6 +38,16 @@ function AutoGenerateButton({ type, lessonContext, existingItems, onGenerated }:
 const playSound = (isCorrect: boolean) => {
   const audio = new Audio(isCorrect ? 'https://www.soundjay.com/buttons/button-09.mp3' : 'https://www.soundjay.com/buttons/button-10.mp3');
   audio.play().catch(e => console.error("Audio play failed", e));
+  
+  try {
+    const msg = new SpeechSynthesisUtterance(isCorrect ? "Em làm đúng rồi, chúc mừng em!" : "Em làm sai rồi, cố gắng lên nhé!");
+    msg.lang = 'vi-VN';
+    // Make sure the voice doesn't overlap excessively if clicked multiple times
+    window.speechSynthesis.cancel();
+    window.speechSynthesis.speak(msg);
+  } catch(e) {
+    console.error("Speech synthesis failed", e);
+  }
 };
 
 function HintButton({ question, lessonContext }: { question: any, lessonContext: any }) {

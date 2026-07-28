@@ -319,13 +319,16 @@ Hãy tạo ra một câu hỏi HOÀN TOÀN MỚI (chưa từng xuất hiện ở
   app.post("/api/hint", async (req, res) => {
     try {
       const { type, question, context } = req.body;
-      const prompt = `Bạn là giáo viên tiếng Anh. Dựa vào bài học: 
+      const prompt = `Bạn là hệ thống gợi ý. Dựa vào bài học: 
 Tiêu đề: ${context.title}
 Từ vựng: ${JSON.stringify(context.vocabulary)}
 Ngữ pháp: ${JSON.stringify(context.grammar)}
 
 Câu hỏi học sinh đang làm: ${JSON.stringify(question)}
-Hãy đưa ra một gợi ý ngắn gọn bằng tiếng Việt để giúp học sinh trả lời được câu hỏi này, nhưng TUYỆT ĐỐI KHÔNG ĐƯỢC ĐƯA RA ĐÁP ÁN TRỰC TIẾP. Giải thích một chút về từ vựng hoặc ngữ pháp liên quan.`;
+YÊU CẦU QUAN TRỌNG: Hãy tìm đáp án đúng bằng tiếng Anh. Sau đó, gợi ý CHỈ LÀ một vài chữ cái đầu tiên của đáp án tiếng Anh đó và thêm dấu "..." ở cuối để học sinh tự đoán phần còn lại. 
+VÍ DỤ: Nếu đáp án là "school bag", bạn CHỈ được phép trả về duy nhất chữ: "schoo..."
+VÍ DỤ 2: Nếu đáp án là "apple", bạn CHỈ được phép trả về duy nhất chữ: "app..."
+Tuyệt đối KHÔNG giải thích dài dòng, KHÔNG có tiếng Việt, CHỈ trả về đoạn chữ cái gợi ý đó thôi!`;
       
       const response = await ai.models.generateContent({
         model: "gemini-2.5-flash",
