@@ -292,7 +292,7 @@ function Type1Exercise({ items, lessonContext, onAdd, isStudentMode }: { items: 
                 className="w-full px-4 py-2 rounded-md border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 onKeyDown={(e) => e.key === 'Enter' && checkAnswer(idx, item.en)}
               />
-              <HintButton question={{ question: item.vn, type: "Translate to English" }} lessonContext={lessonContext} />
+              <HintButton question={{ en: item.en }} lessonContext={lessonContext} />
             </div>
             <button 
               onClick={() => checkAnswer(idx, item.en)}
@@ -378,7 +378,7 @@ function Type2Exercise({ items, lessonContext, onAdd, isStudentMode }: { items: 
                 className="w-full px-4 py-2 rounded-md border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 onKeyDown={(e) => e.key === 'Enter' && checkAnswer(idx, item.word)}
               />
-              <HintButton question={{ question: "Guess the word", type: "Listen and write" }} lessonContext={lessonContext} />
+              <HintButton question={{ word: item.word }} lessonContext={lessonContext} />
             </div>
             <button 
               onClick={() => checkAnswer(idx, item.word)}
