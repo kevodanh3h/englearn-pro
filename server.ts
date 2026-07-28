@@ -123,7 +123,15 @@ async function startServer() {
           }
         }
         
-        Hãy luôn đảm bảo số lượng bài tập (type1, type2, type3, type5, type6, type8) có ít nhất 3-5 câu mỗi dạng. Type 4 có 1 đoạn văn và 3 câu hỏi. Type 7 có 1 chủ đề.
+        YÊU CẦU VỀ SỐ LƯỢNG BÀI TẬP - CỰC KỲ QUAN TRỌNG:
+        - "type1" (Viết từ): BẮT BUỘC tạo một mục cho MỖI từ vựng trong vocabulary. Nếu có 15 từ vựng, PHẢI có đúng 15 mục type1. TUYỆT ĐỐI không được bỏ sót từ vựng nào.
+        - "type2" (Nghe từ): BẮT BUỘC tạo một mục cho MỖI từ vựng trong vocabulary. Nếu có 15 từ vựng, PHẢI có đúng 15 mục type2. TUYỆT ĐỐI không được bỏ sót từ vựng nào.
+        - "type3" (Ghép câu): Tạo tối thiểu 1 câu cho MỖI cấu trúc ngữ pháp trong grammar. Nếu có 3 ngữ pháp, PHẢI có ít nhất 3 mục type3.
+        - "type4": 1 đoạn văn đọc hiểu dài có dùng từ vựng của bài và 4-5 câu hỏi.
+        - "type5" (Nghe dịch): Tạo tối thiểu 1 hội thoại cho mỗi cấu trúc ngữ pháp, tối thiểu 3 mục.
+        - "type6" (Chính tả): BẮT BUỘC tạo một câu chính tả sử dụng ít nhất mỗi từ vựng một lần. Tối thiểu 5 mục.
+        - "type7": 1 chủ đề viết đoạn văn.
+        - "type8" (Trắc nghiệm): Tạo ít nhất 1 câu trắc nghiệm cho mỗi từ vựng VÀ mỗi cấu trúc ngữ pháp.
       `;
 
       const response = await ai.models.generateContent({
