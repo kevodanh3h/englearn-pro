@@ -35,6 +35,18 @@ function AutoGenerateButton({ type, lessonContext, existingItems, onGenerated }:
   );
 }
 
+// Tải giọng nói tiếng Việt sẵn
+let viVoice: SpeechSynthesisVoice | null = null;
+const loadVoices = () => {
+  const voices = window.speechSynthesis.getVoices();
+  viVoice = voices.find(v => v.lang.includes('vi') || v.lang.includes('VI') || v.name.includes('Vietnamese')) || null;
+};
+// Gọi ngay và gắn sự kiện
+if (typeof window !== 'undefined' && window.speechSynthesis) {
+  loadVoices();
+  window.speechSynthesis.onvoiceschanged = loadVoices;
+}
+
 const playSound = (isCorrect: boolean) => {
   const audio = new Audio(isCorrect ? 'https://www.soundjay.com/buttons/button-09.mp3' : 'https://www.soundjay.com/buttons/button-10.mp3');
   audio.play().catch(e => console.error("Audio play failed", e));
@@ -42,13 +54,7 @@ const playSound = (isCorrect: boolean) => {
   try {
     const msg = new SpeechSynthesisUtterance(isCorrect ? "Em làm đúng rồi, chúc mừng em!" : "Em làm sai rồi, cố gắng lên nhé!");
     msg.lang = 'vi-VN';
-    
-    // Ép trình duyệt tìm và sử dụng đúng giọng đọc tiếng Việt
-    const voices = window.speechSynthesis.getVoices();
-    const viVoice = voices.find(v => v.lang.includes('vi') || v.lang.includes('VI') || v.name.includes('Vietnamese'));
-    if (viVoice) {
-      msg.voice = viVoice;
-    }
+    if (viVoice) msg.voice = viVoice;
     
     window.speechSynthesis.cancel();
     window.speechSynthesis.speak(msg);
@@ -57,37 +63,37 @@ const playSound = (isCorrect: boolean) => {
   }
 };
 
-function HintButton({ question, lessonContext }: { question: any, lessonContext: any }) {
-  const [hint, setHint] = useState("");
-  const [loading, setLoading] = useState(false);
+function HintButton({ question }: { question: any, lessonContext: any }) {
+  const [showHint, setShowHint] = useState(false);
 
-  const getHint = async () => {
-    if (hint) return;
-    setLoading(true);
-    try {
-      const res = await fetch("/api/hint", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ question, context: lessonContext })
-      });
-      const data = await res.json();
-      if (data.hint) setHint(data.hint);
-    } catch (e) {
-      console.error(e);
-    } finally {
-      setLoading(false);
+  // Tạo gợi ý trực tiếp không cần gọi AI để tránh lỗi lấy nhầm từ khóa JSON
+  const getLocalHint = () => {
+    let answer = "";
+    if (question.en) answer = question.en;
+    else if (question.word) answer = question.word;
+    else if (question.correct) answer = question.correct;
+    else if (question.sentence) answer = question.sentence;
+    else if (question.answer) answer = question.answer;
+
+    if (!answer) return "Không có gợi ý...";
+    
+    const words = answer.split(" ");
+    if (words.length === 1) {
+      return answer.slice(0, Math.max(1, Math.floor(answer.length / 2))) + "...";
+    } else {
+      return words.map(w => w.slice(0, 2) + "...").join(" ");
     }
   };
 
   return (
     <div className="mt-2">
-      {!hint ? (
-        <button onClick={getHint} disabled={loading} className="text-sm text-amber-600 hover:text-amber-700 flex items-center font-medium">
-          💡 {loading ? "Đang suy nghĩ..." : "Xin gợi ý AI"}
+      {!showHint ? (
+        <button onClick={() => setShowHint(true)} className="text-sm text-amber-600 hover:text-amber-700 flex items-center font-medium">
+          💡 Xin gợi ý
         </button>
       ) : (
         <div className="p-3 bg-amber-50 text-amber-800 text-sm rounded-lg border border-amber-200 mt-2 whitespace-pre-wrap">
-          <strong>💡 Gợi ý: </strong> {hint}
+          <strong>💡 Gợi ý: </strong> {getLocalHint()}
         </div>
       )}
     </div>
