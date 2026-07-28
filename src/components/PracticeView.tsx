@@ -42,7 +42,14 @@ const playSound = (isCorrect: boolean) => {
   try {
     const msg = new SpeechSynthesisUtterance(isCorrect ? "Em làm đúng rồi, chúc mừng em!" : "Em làm sai rồi, cố gắng lên nhé!");
     msg.lang = 'vi-VN';
-    // Make sure the voice doesn't overlap excessively if clicked multiple times
+    
+    // Ép trình duyệt tìm và sử dụng đúng giọng đọc tiếng Việt
+    const voices = window.speechSynthesis.getVoices();
+    const viVoice = voices.find(v => v.lang.includes('vi') || v.lang.includes('VI') || v.name.includes('Vietnamese'));
+    if (viVoice) {
+      msg.voice = viVoice;
+    }
+    
     window.speechSynthesis.cancel();
     window.speechSynthesis.speak(msg);
   } catch(e) {

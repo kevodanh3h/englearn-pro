@@ -319,16 +319,15 @@ Hãy tạo ra một câu hỏi HOÀN TOÀN MỚI (chưa từng xuất hiện ở
   app.post("/api/hint", async (req, res) => {
     try {
       const { type, question, context } = req.body;
-      const prompt = `Bạn là hệ thống gợi ý. Dựa vào bài học: 
-Tiêu đề: ${context.title}
-Từ vựng: ${JSON.stringify(context.vocabulary)}
-Ngữ pháp: ${JSON.stringify(context.grammar)}
+      const prompt = `Nhiệm vụ: Tạo gợi ý điền từ cho câu hỏi tiếng Anh sau.
+Dữ liệu câu hỏi: ${JSON.stringify(question)}
 
-Câu hỏi học sinh đang làm: ${JSON.stringify(question)}
-YÊU CẦU QUAN TRỌNG: Hãy tìm đáp án đúng bằng tiếng Anh. Sau đó, gợi ý CHỈ LÀ một vài chữ cái đầu tiên của đáp án tiếng Anh đó và thêm dấu "..." ở cuối để học sinh tự đoán phần còn lại. 
-VÍ DỤ: Nếu đáp án là "school bag", bạn CHỈ được phép trả về duy nhất chữ: "schoo..."
-VÍ DỤ 2: Nếu đáp án là "apple", bạn CHỈ được phép trả về duy nhất chữ: "app..."
-Tuyệt đối KHÔNG giải thích dài dòng, KHÔNG có tiếng Việt, CHỈ trả về đoạn chữ cái gợi ý đó thôi!`;
+Quy tắc:
+1. Tìm đáp án hoặc từ vựng chính tiếng Anh trong câu hỏi trên.
+2. Trích xuất 2-3 chữ cái đầu tiên của từ đó.
+3. Thêm dấu "..." vào cuối.
+4. CHỈ trả về đúng chuỗi ký tự đó, TUYỆT ĐỐI KHÔNG trả lời thêm bất kỳ chữ nào khác.
+Ví dụ: Nếu từ là "hello" -> "hel...", nếu từ là "dog" -> "do...".`;
       
       const response = await ai.models.generateContent({
         model: "gemini-2.5-flash",
