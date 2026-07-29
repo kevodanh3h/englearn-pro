@@ -110,19 +110,25 @@ export default function App() {
           </div>
           <p className="text-slate-500 font-medium mb-6">Teacher: Bùi Văn Hải</p>
           
-          <div className="flex space-x-2 bg-slate-100 p-1 rounded-xl">
-            {["6", "7", "8", "9"].map(grade => (
+          <div className="flex space-x-2 bg-slate-100 p-1 rounded-xl overflow-x-auto">
+            {[
+              { id: "6", label: "Khối 6" },
+              { id: "7", label: "Khối 7" },
+              { id: "8", label: "Khối 8" },
+              { id: "9", label: "Khối 9" },
+              { id: "general", label: "Tổng hợp" }
+            ].map(tab => (
               <button
-                key={grade}
-                onClick={() => setSelectedGrade(grade)}
+                key={tab.id}
+                onClick={() => setSelectedGrade(tab.id)}
                 className={cn(
-                  "px-6 py-2 rounded-lg font-semibold transition-all duration-200",
-                  selectedGrade === grade 
+                  "px-6 py-2 rounded-lg font-semibold transition-all duration-200 whitespace-nowrap",
+                  selectedGrade === tab.id 
                     ? "bg-white text-blue-600 shadow-sm" 
                     : "text-slate-500 hover:text-slate-700 hover:bg-slate-200/50"
                 )}
               >
-                Khối {grade}
+                {tab.label}
               </button>
             ))}
           </div>
@@ -130,7 +136,9 @@ export default function App() {
 
         <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-10">
           <div className="flex justify-between items-center mb-8">
-            <h2 className="text-2xl font-bold text-slate-800">Danh sách bài học - Khối {selectedGrade}</h2>
+            <h2 className="text-2xl font-bold text-slate-800">
+              Danh sách bài học - {selectedGrade === 'general' ? 'Tổng hợp' : `Khối ${selectedGrade}`}
+            </h2>
             {!isStudentMode && (
               <button 
                 onClick={() => setIsUploading(true)}
@@ -145,7 +153,9 @@ export default function App() {
           {filteredLessons.length === 0 ? (
             <div className="text-center py-20 bg-white rounded-2xl shadow-sm border border-slate-200">
               <BookOpen className="w-16 h-16 text-slate-300 mx-auto mb-4" />
-              <h2 className="text-xl font-medium text-slate-600">Chưa có bài học nào cho Khối {selectedGrade}</h2>
+              <h2 className="text-xl font-medium text-slate-600">
+                Chưa có bài học nào cho {selectedGrade === 'general' ? 'phần Tổng hợp' : `Khối ${selectedGrade}`}
+              </h2>
               <p className="text-slate-500 mt-2">Hãy tải lên một file PDF sách giáo khoa để bắt đầu.</p>
               {!isStudentMode && (
                 <button 
